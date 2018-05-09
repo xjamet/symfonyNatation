@@ -1,0 +1,8 @@
+ffni_natation_homepage:
+    path:     /
+    defaults: { _controller: ffniNatationBundle:Default:index }
+
+accueil:
+    path: /accueil
+    defaults: { _controller: ffniNatationBundle:iNatation:accueil }
+
