@@ -37,5 +37,62 @@ class Droits
     private $droitAcces;
 
 
-}
 
+    /**
+     * Get iddroits.
+     *
+     * @return int
+     */
+    public function getIddroits()
+    {
+        return $this->iddroits;
+    }
+
+    /**
+     * Set commentaire.
+     *
+     * @param string $commentaire
+     *
+     * @return Droits
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaire.
+     *
+     * @return string
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
+    }
+
+    /**
+     * Set droitAcces.
+     *
+     * @param string $droitAcces
+     *
+     * @return Droits
+     */
+    public function setDroitAcces($droitAcces)
+    {
+        $this->droitAcces = $droitAcces;
+
+        return $this;
+    }
+
+    /**
+     * Get droitAcces.
+     *
+     * @return string
+     */
+    public function getDroitAcces()
+    {
+        return $this->droitAcces;
+    }
+}

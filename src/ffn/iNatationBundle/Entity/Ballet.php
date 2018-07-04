@@ -39,5 +39,62 @@ class Ballet
     private $idcompetition;
 
 
-}
 
+    /**
+     * Get idballet.
+     *
+     * @return int
+     */
+    public function getIdballet()
+    {
+        return $this->idballet;
+    }
+
+    /**
+     * Set description.
+     *
+     * @param string $description
+     *
+     * @return Ballet
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set idcompetition.
+     *
+     * @param \ffn\iNatationBundle\Entity\Competition|null $idcompetition
+     *
+     * @return Ballet
+     */
+    public function setIdcompetition(\ffn\iNatationBundle\Entity\Competition $idcompetition = null)
+    {
+        $this->idcompetition = $idcompetition;
+
+        return $this;
+    }
+
+    /**
+     * Get idcompetition.
+     *
+     * @return \ffn\iNatationBundle\Entity\Competition|null
+     */
+    public function getIdcompetition()
+    {
+        return $this->idcompetition;
+    }
+}

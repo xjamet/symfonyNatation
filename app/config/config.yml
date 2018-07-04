@@ -38,10 +38,12 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
 
+
+
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver: pdo_mysql
+        driver: pdo_pgsql
         host: '%database_host%'
         port: '%database_port%'
         dbname: '%database_name%'
@@ -133,3 +135,13 @@ assetic:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/fonts/glyphicons-halflings-regular.woff"
 
             output: "fonts/glyphicons-halflings-regular.woff"
+
+fos_user:
+    db_driver: orm #
+    firewall_name: main
+    user_class: ffn\iNatationBundle\Entity\Utilisateur
+    service:
+        mailer: fos_user.mailer.twig_swift
+    from_email:
+        address: "test@gmail.com"
+        sender_name: "test"

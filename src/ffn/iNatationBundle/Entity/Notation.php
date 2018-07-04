@@ -72,5 +72,122 @@ class Notation
         $this->idrole = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-}
 
+    /**
+     * Get idnotation.
+     *
+     * @return int
+     */
+    public function getIdnotation()
+    {
+        return $this->idnotation;
+    }
+
+    /**
+     * Set note.
+     *
+     * @param float $note
+     *
+     * @return Notation
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
+
+        return $this;
+    }
+
+    /**
+     * Get note.
+     *
+     * @return float
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * Set idparticipation.
+     *
+     * @param \ffn\iNatationBundle\Entity\Pariticipation|null $idparticipation
+     *
+     * @return Notation
+     */
+    public function setIdparticipation(\ffn\iNatationBundle\Entity\Pariticipation $idparticipation = null)
+    {
+        $this->idparticipation = $idparticipation;
+
+        return $this;
+    }
+
+    /**
+     * Get idparticipation.
+     *
+     * @return \ffn\iNatationBundle\Entity\Pariticipation|null
+     */
+    public function getIdparticipation()
+    {
+        return $this->idparticipation;
+    }
+
+    /**
+     * Set idjuge.
+     *
+     * @param \ffn\iNatationBundle\Entity\Juge|null $idjuge
+     *
+     * @return Notation
+     */
+    public function setIdjuge(\ffn\iNatationBundle\Entity\Juge $idjuge = null)
+    {
+        $this->idjuge = $idjuge;
+
+        return $this;
+    }
+
+    /**
+     * Get idjuge.
+     *
+     * @return \ffn\iNatationBundle\Entity\Juge|null
+     */
+    public function getIdjuge()
+    {
+        return $this->idjuge;
+    }
+
+    /**
+     * Add idrole.
+     *
+     * @param \ffn\iNatationBundle\Entity\Role $idrole
+     *
+     * @return Notation
+     */
+    public function addIdrole(\ffn\iNatationBundle\Entity\Role $idrole)
+    {
+        $this->idrole[] = $idrole;
+
+        return $this;
+    }
+
+    /**
+     * Remove idrole.
+     *
+     * @param \ffn\iNatationBundle\Entity\Role $idrole
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeIdrole(\ffn\iNatationBundle\Entity\Role $idrole)
+    {
+        return $this->idrole->removeElement($idrole);
+    }
+
+    /**
+     * Get idrole.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIdrole()
+    {
+        return $this->idrole;
+    }
+}

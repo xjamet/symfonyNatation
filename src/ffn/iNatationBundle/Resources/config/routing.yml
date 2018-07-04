@@ -6,3 +6,25 @@ accueil:
     path: /accueil
     defaults: { _controller: ffniNatationBundle:iNatation:accueil }
 
+accueilAdmin:
+    path: /admin/accueilAdmin
+    defaults: { _controller: ffniNatationBundle:iNatation:accueilAdmin }
+
+creationJuge:
+    path: /admin/creationJuge
+    defaults: { _controller: ffniNatationBundle:iNatation:creationJuge }
+
+creationOrganisateur:
+    path: /admin/creationOrganisateur
+    defaults: { _controller: ffniNatationBundle:iNatation:creationOrganisateur }
+
+administrateur:
+    path: /admin/administrateur
+    defaults: { _controller: ffniNatationBundle:iNatation:administrateur }
+competition:
+    path: /competition
+    defaults: { _controller: ffniNatationBundle:iNatation:competition }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

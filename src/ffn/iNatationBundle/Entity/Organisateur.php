@@ -38,7 +38,44 @@ class Organisateur
      * })
      */
     private $idutilisateur;
+    public function getIdorganisateur()
+    {
+        return $this->idorganisateur;
+    }
+
+    public function setIdOrganisateur($IdOrganisateur)
+    {
+        $this->idorganisateur = $IdOrganisateur;
+    }
+
+    public function getOrganisateurcol()
+    {
+        return $this->organisateurcol;
+    }
+
+    public function setOrganisateurcol($organisateurcol)
+    {
+        $this->organisateurcol = $organisateurcol;
+    }
+
+    public function IdUtilisateur()
+    {
+        return $this->idutilisateur;
+    }
+
+    public function setIdUtilisateur($IdUtilisateur)
+    {
+        $this->idutilisateur = $IdUtilisateur;
+    }
 
 
+    /**
+     * Get idutilisateur.
+     *
+     * @return \ffn\iNatationBundle\Entity\Utilisateur|null
+     */
+    public function getIdutilisateur()
+    {
+        return $this->idutilisateur;
+    }
 }
-

@@ -44,5 +44,86 @@ class Club
     private $nomdirigeant;
 
 
-}
 
+    /**
+     * Get idclub.
+     *
+     * @return int
+     */
+    public function getIdclub()
+    {
+        return $this->idclub;
+    }
+
+    /**
+     * Set nomClub.
+     *
+     * @param string $nomClub
+     *
+     * @return Club
+     */
+    public function setNomClub($nomClub)
+    {
+        $this->nomClub = $nomClub;
+
+        return $this;
+    }
+
+    /**
+     * Get nomClub.
+     *
+     * @return string
+     */
+    public function getNomClub()
+    {
+        return $this->nomClub;
+    }
+
+    /**
+     * Set localisation.
+     *
+     * @param string $localisation
+     *
+     * @return Club
+     */
+    public function setLocalisation($localisation)
+    {
+        $this->localisation = $localisation;
+
+        return $this;
+    }
+
+    /**
+     * Get localisation.
+     *
+     * @return string
+     */
+    public function getLocalisation()
+    {
+        return $this->localisation;
+    }
+
+    /**
+     * Set nomdirigeant.
+     *
+     * @param string $nomdirigeant
+     *
+     * @return Club
+     */
+    public function setNomdirigeant($nomdirigeant)
+    {
+        $this->nomdirigeant = $nomdirigeant;
+
+        return $this;
+    }
+
+    /**
+     * Get nomdirigeant.
+     *
+     * @return string
+     */
+    public function getNomdirigeant()
+    {
+        return $this->nomdirigeant;
+    }
+}

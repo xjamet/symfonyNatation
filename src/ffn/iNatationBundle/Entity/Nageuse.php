@@ -66,5 +66,122 @@ class Nageuse
         $this->idequipe = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-}
 
+    /**
+     * Get idnageuse.
+     *
+     * @return int
+     */
+    public function getIdnageuse()
+    {
+        return $this->idnageuse;
+    }
+
+    /**
+     * Set nomNageuse.
+     *
+     * @param string $nomNageuse
+     *
+     * @return Nageuse
+     */
+    public function setNomNageuse($nomNageuse)
+    {
+        $this->nomNageuse = $nomNageuse;
+
+        return $this;
+    }
+
+    /**
+     * Get nomNageuse.
+     *
+     * @return string
+     */
+    public function getNomNageuse()
+    {
+        return $this->nomNageuse;
+    }
+
+    /**
+     * Set prenomNageuse.
+     *
+     * @param string $prenomNageuse
+     *
+     * @return Nageuse
+     */
+    public function setPrenomNageuse($prenomNageuse)
+    {
+        $this->prenomNageuse = $prenomNageuse;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomNageuse.
+     *
+     * @return string
+     */
+    public function getPrenomNageuse()
+    {
+        return $this->prenomNageuse;
+    }
+
+    /**
+     * Set datedenaissance.
+     *
+     * @param \DateTime $datedenaissance
+     *
+     * @return Nageuse
+     */
+    public function setDatedenaissance($datedenaissance)
+    {
+        $this->datedenaissance = $datedenaissance;
+
+        return $this;
+    }
+
+    /**
+     * Get datedenaissance.
+     *
+     * @return \DateTime
+     */
+    public function getDatedenaissance()
+    {
+        return $this->datedenaissance;
+    }
+
+    /**
+     * Add idequipe.
+     *
+     * @param \ffn\iNatationBundle\Entity\Equipe $idequipe
+     *
+     * @return Nageuse
+     */
+    public function addIdequipe(\ffn\iNatationBundle\Entity\Equipe $idequipe)
+    {
+        $this->idequipe[] = $idequipe;
+
+        return $this;
+    }
+
+    /**
+     * Remove idequipe.
+     *
+     * @param \ffn\iNatationBundle\Entity\Equipe $idequipe
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeIdequipe(\ffn\iNatationBundle\Entity\Equipe $idequipe)
+    {
+        return $this->idequipe->removeElement($idequipe);
+    }
+
+    /**
+     * Get idequipe.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIdequipe()
+    {
+        return $this->idequipe;
+    }
+}

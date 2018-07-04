@@ -53,6 +53,44 @@ class Competition
      */
     private $idorganisateur;
 
-
+    public function getIdcompetition()
+    {
+      return $this->idcompetition;
+    }
+    public function setIdcompetition($idcompetition)
+    {
+        $this->idcompetition = $idcompetition;
+    }
+    public function getNomCompetition()
+    {
+        return $this->nomCompetition;
+    }
+    public function setNomCompetition($nomCompetition)
+    {
+        $this->nomCompetition = $nomCompetition;
+    }
+    public function getLieuCompetition()
+    {
+        return $this->lieuCompetition;
+    }
+    public function setLieuCompetition($lieuCompetition)
+    {
+        $this->lieuCompetition = $lieuCompetition;
+    }
+    public function getDateCompetition()
+    {
+        return $this->dateCompetition;
+    }
+    public  function setDateCompetition(\DateTime $DateCompetition = null)
+    {
+        $this->dateCompetition = $DateCompetition;
+    }
+    public function getIdorganisateur()
+    {
+        return $this->idorganisateur;
+    }
+    public function setIdorganisateur($idorganisateur)
+    {
+        $this->idorganisateur = $idorganisateur;
+    }
 }
-

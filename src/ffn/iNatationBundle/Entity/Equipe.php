@@ -54,5 +54,98 @@ class Equipe
         $this->idnageuse = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-}
 
+    /**
+     * Get idequipe.
+     *
+     * @return int
+     */
+    public function getIdequipe()
+    {
+        return $this->idequipe;
+    }
+
+    /**
+     * Set nomEquipe.
+     *
+     * @param string $nomEquipe
+     *
+     * @return Equipe
+     */
+    public function setNomEquipe($nomEquipe)
+    {
+        $this->nomEquipe = $nomEquipe;
+
+        return $this;
+    }
+
+    /**
+     * Get nomEquipe.
+     *
+     * @return string
+     */
+    public function getNomEquipe()
+    {
+        return $this->nomEquipe;
+    }
+
+    /**
+     * Set idclub.
+     *
+     * @param \ffn\iNatationBundle\Entity\Club|null $idclub
+     *
+     * @return Equipe
+     */
+    public function setIdclub(\ffn\iNatationBundle\Entity\Club $idclub = null)
+    {
+        $this->idclub = $idclub;
+
+        return $this;
+    }
+
+    /**
+     * Get idclub.
+     *
+     * @return \ffn\iNatationBundle\Entity\Club|null
+     */
+    public function getIdclub()
+    {
+        return $this->idclub;
+    }
+
+    /**
+     * Add idnageuse.
+     *
+     * @param \ffn\iNatationBundle\Entity\Nageuse $idnageuse
+     *
+     * @return Equipe
+     */
+    public function addIdnageuse(\ffn\iNatationBundle\Entity\Nageuse $idnageuse)
+    {
+        $this->idnageuse[] = $idnageuse;
+
+        return $this;
+    }
+
+    /**
+     * Remove idnageuse.
+     *
+     * @param \ffn\iNatationBundle\Entity\Nageuse $idnageuse
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeIdnageuse(\ffn\iNatationBundle\Entity\Nageuse $idnageuse)
+    {
+        return $this->idnageuse->removeElement($idnageuse);
+    }
+
+    /**
+     * Get idnageuse.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIdnageuse()
+    {
+        return $this->idnageuse;
+    }
+}

@@ -50,5 +50,86 @@ class Pariticipation
     private $idballet;
 
 
-}
 
+    /**
+     * Get idparticipation.
+     *
+     * @return int
+     */
+    public function getIdparticipation()
+    {
+        return $this->idparticipation;
+    }
+
+    /**
+     * Set resultat.
+     *
+     * @param float|null $resultat
+     *
+     * @return Pariticipation
+     */
+    public function setResultat($resultat = null)
+    {
+        $this->resultat = $resultat;
+
+        return $this;
+    }
+
+    /**
+     * Get resultat.
+     *
+     * @return float|null
+     */
+    public function getResultat()
+    {
+        return $this->resultat;
+    }
+
+    /**
+     * Set idequipe.
+     *
+     * @param \ffn\iNatationBundle\Entity\Equipe|null $idequipe
+     *
+     * @return Pariticipation
+     */
+    public function setIdequipe(\ffn\iNatationBundle\Entity\Equipe $idequipe = null)
+    {
+        $this->idequipe = $idequipe;
+
+        return $this;
+    }
+
+    /**
+     * Get idequipe.
+     *
+     * @return \ffn\iNatationBundle\Entity\Equipe|null
+     */
+    public function getIdequipe()
+    {
+        return $this->idequipe;
+    }
+
+    /**
+     * Set idballet.
+     *
+     * @param \ffn\iNatationBundle\Entity\Ballet|null $idballet
+     *
+     * @return Pariticipation
+     */
+    public function setIdballet(\ffn\iNatationBundle\Entity\Ballet $idballet = null)
+    {
+        $this->idballet = $idballet;
+
+        return $this;
+    }
+
+    /**
+     * Get idballet.
+     *
+     * @return \ffn\iNatationBundle\Entity\Ballet|null
+     */
+    public function getIdballet()
+    {
+        return $this->idballet;
+    }
+}

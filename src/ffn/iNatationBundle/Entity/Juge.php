@@ -32,7 +32,7 @@ class Juge
     /**
      * @var \Role
      *
-     * @ORM\ManyToOne(targetEntity="Role")
+     * @ORM\ManyToOne(targetEntity="Role", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idrole", referencedColumnName="idrole")
      * })
@@ -42,7 +42,7 @@ class Juge
     /**
      * @var \Utilisateur
      *
-     * @ORM\ManyToOne(targetEntity="Utilisateur")
+     * @ORM\ManyToOne(targetEntity="Utilisateur", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idutilisateur", referencedColumnName="idutilisateur")
      * })
@@ -50,5 +50,86 @@ class Juge
     private $idutilisateur;
 
 
-}
 
+    /**
+     * Get idjuge.
+     *
+     * @return int
+     */
+    public function getIdjuge()
+    {
+        return $this->idjuge;
+    }
+
+    /**
+     * Set nomJuge.
+     *
+     * @param string $nomJuge
+     *
+     * @return Juge
+     */
+    public function setNomJuge($nomJuge)
+    {
+        $this->nomJuge = $nomJuge;
+
+        return $this;
+    }
+
+    /**
+     * Get nomJuge.
+     *
+     * @return string
+     */
+    public function getNomJuge()
+    {
+        return $this->nomJuge;
+    }
+
+    /**
+     * Set idrole.
+     *
+     * @param \ffn\iNatationBundle\Entity\Role|null $idrole
+     *
+     * @return Juge
+     */
+    public function setIdrole(\ffn\iNatationBundle\Entity\Role $idrole = null)
+    {
+        $this->idrole = $idrole;
+
+        return $this;
+    }
+
+    /**
+     * Get idrole.
+     *
+     * @return \ffn\iNatationBundle\Entity\Role|null
+     */
+    public function getIdrole()
+    {
+        return $this->idrole;
+    }
+
+    /**
+     * Set idutilisateur.
+     *
+     * @param \ffn\iNatationBundle\Entity\Utilisateur|null $idutilisateur
+     *
+     * @return Utilisateur
+     */
+    public function setIdutilisateur(\ffn\iNatationBundle\Entity\Utilisateur $idutilisateur = null)
+    {
+        $this->idutilisateur = $idutilisateur;
+
+        return $this;
+    }
+
+    /**
+     * Get idutilisateur.
+     *
+     * @return \ffn\iNatationBundle\Entity\Utilisateur|null
+     */
+    public function getIdutilisateur()
+    {
+        return $this->idutilisateur;
+    }
+}

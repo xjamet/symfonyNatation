@@ -39,12 +39,6 @@ class Role
      */
     private $idcompetition;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Notation", mappedBy="idrole")
-     */
-    private $idnotation;
 
     /**
      * Constructor
@@ -54,5 +48,65 @@ class Role
         $this->idnotation = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-}
 
+    /**
+     * Get idrole.
+     *
+     * @return int
+     */
+    public function getIdrole()
+    {
+        return $this->idrole;
+    }
+
+    /**
+     * Set role.
+     *
+     * @param string $role
+     *
+     * @return Role
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * Get role.
+     *
+     * @return string
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * Set idcompetition.
+     *
+     * @param \ffn\iNatationBundle\Entity\Competition|null $idcompetition
+     *
+     * @return Role
+     */
+    public function setIdcompetition(\ffn\iNatationBundle\Entity\Competition $idcompetition = null)
+    {
+        $this->idcompetition = $idcompetition;
+
+        return $this;
+    }
+
+    /**
+     * Get idcompetition.
+     *
+     * @return \ffn\iNatationBundle\Entity\Competition|null
+     */
+    public function getIdcompetition()
+    {
+        return $this->idcompetition;
+    }
+
+
+
+}
